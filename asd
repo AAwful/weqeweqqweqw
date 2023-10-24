@@ -4848,7 +4848,7 @@ local PepsisWorld = library:Evil()
        
     
     elseif World2 then
-    
+       
             page1:AddLabelX({Name = "Status : World 2"})
        
             page1:AddToggle({
@@ -5896,9 +5896,8 @@ local PepsisWorld = library:Evil()
      
             page1:AddLabelX({Name = "Status : World 3"})
     
-       
-    
-    
+          
+      
     
             if not World1 then
                 page1:AddToggle({Name = "Auto Leviathan", Value = _G.Settings.Main["Teleport to Sea Beast"], Callback = function(value)
@@ -6045,7 +6044,7 @@ local PepsisWorld = library:Evil()
                     end
                 end)
             end})
-        
+            
             
             page1:AddToggle({Name = "Auto Piranha", Value = _G.Settings.Main["AutoPiranha"],Callback =  function(value)
                 _G.Settings.Main["AutoPiranha"] = value
@@ -6233,7 +6232,7 @@ local PepsisWorld = library:Evil()
                     keyrelease(0x57)
                 end
             end})
-        end
+          
     if World3 then
     local Elite_Hunter_Status = page1:AddLabelX({Name = "Status : N/Q"}) 
    
@@ -10554,15 +10553,15 @@ local PepsisWorld = library:Evil()
         end
     end)
    
-        page8:Label("ESP")
+        page8:AddLabelX({Name = "ESP"})
     
-        page8:Toggle("ESPPlayer", _G.Settings.ESPPlayer, function(value)
+        page8:AddToggle({Name  = "ESPPlayer", Value = _G.Settings.ESPPlayer, Callback = function(value)
             ESPPlayer = value
             while ESPPlayer do
                 task.wait()
                 UpdatePlayerChams()
             end
-        end)
+        end})
         spawn(function()
             while task.wait() do
                 if ESPPlayer then
@@ -10570,35 +10569,35 @@ local PepsisWorld = library:Evil()
                 end
             end
         end)
-        page8:Toggle("ESPChest", _G.ChestEsp, function(value)
+        page8:AddToggle({Name = "ESPChest", Value = _G.ChestEsp, Callback = function(value)
             ChestESP = value
             while ChestESP do
                 task.wait()
                 UpdateChestEsp()
             end
-        end)
+        end})
 
-        page8:Toggle("ESPDevilFruit", _G.DevilFruitESP, function(value)
+        page8:AddToggle({Name = "ESPDevilFruit", Value = _G.DevilFruitESP, Callback = function(value)
             DevilFruitESP = value
             while DevilFruitESP do
                 task.wait()
                 UpdateBfEsp()
             end
-        end)
-        page8:Toggle("ESPFlower", _G.DevilFruitESP, function(value)
+        end})
+        page8:AddToggle({Name = "ESPFlower", Value = _G.DevilFruitESP, Callback = function(value)
             FlowerESP = value
             while FlowerESP do
                 task.wait()
                 UpdateFlowerEsp()
             end
-        end)
-        page8:Toggle("ESPIsland", _G.DevilFruitESP, function(value)
+        end})
+        page8:AddToggle({Name = "ESPIsland", Value = _G.DevilFruitESP, Callback = function(value)
             IslandESP = value
             while IslandESP do
                 task.wait()
                 UpdateIslandESP()
             end
-        end)
+        end})
   
     function isnil(thing)
         return (thing == nil)

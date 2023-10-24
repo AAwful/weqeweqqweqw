@@ -4848,7 +4848,7 @@ local PepsisWorld = library:Evil()
        
     
     elseif World2 then
-       
+    
             page1:AddLabelX({Name = "Status : World 2"})
        
             page1:AddToggle({
@@ -6045,7 +6045,7 @@ local PepsisWorld = library:Evil()
                     end
                 end)
             end})
-            
+        
             
             page1:AddToggle({Name = "Auto Piranha", Value = _G.Settings.Main["AutoPiranha"],Callback =  function(value)
                 _G.Settings.Main["AutoPiranha"] = value
@@ -6233,7 +6233,7 @@ local PepsisWorld = library:Evil()
                     keyrelease(0x57)
                 end
             end})
-          
+        end
     if World3 then
     local Elite_Hunter_Status = page1:AddLabelX({Name = "Status : N/Q"}) 
    
